@@ -1,0 +1,19 @@
+<div class="card col-12 {{ getBgCard(transacao.tipo) }} margin-bottom-5 sombra"> 
+  <div class="card-body">
+    <div class="row">
+      <span class="col">
+        <i class="{{ transacao.categoria.imagem }}"></i>
+      </span>
+      <span class="col" >
+        <b>{{ transacao.descricao }}</b> <br/>
+        <small>{{ transacao.categoria.descricao }}</small>
+      </span> 
+      <span class="col" >
+        <b class="{{ getCorValor(transacao.tipo) }}">{{ transacao.valor | currency: 'R$ '}}</b> <br/>
+        <small>{{ getStatus( transacao.tipo, transacao.isEfetuado) }}</small>
+      </span>
+      <span class="col-1 {{ getCorFaixaStatus(transacao.isEfetuado) }} faixa-status"></span>
+    </div> 
+  </div>
+
+</div>
