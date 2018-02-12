@@ -1,11 +1,15 @@
 //Configs
 var app = require('./config/express')();
+var consign = require('consign');
 
-var firebase = require('./config/firebase.config')();
-var database = firebase.database();
-//https://finger-5bfcf.firebaseio.com/
-var routesProdutos = require('./app/routes/categoriaRoutes')(app);
+require('./config/mongo.config.js');
+
+consign({cwd: 'app'})
+    .include('models')
+    .then('services')
+    .then('routes')
+    .into(app);
 
 app.listen(3000, function(){
-    console.log('Teste');
+    console.log('Servidor iniciado');
 });
