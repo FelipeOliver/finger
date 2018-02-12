@@ -11,6 +11,6 @@ export class ContaCorrenteService {
     }
 
     getCategorias() {
-        return this.http.get('http://localhost:3000/categorias');
+        return this.http.get('http://localhost:3000/lancamentos');
     }
 }
