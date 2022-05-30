@@ -1,10 +1,10 @@
-package com.finger.transacao;
+package com.finger.transaction;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TransacaoApplicationTests {
+class TransactionApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,13 +1,13 @@
-package com.finger.transacao;
+package com.finger.transaction;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TransacaoApplication {
+public class TransactionApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TransacaoApplication.class, args);
+		SpringApplication.run(TransactionApplication.class, args);
 	}
 
 }
